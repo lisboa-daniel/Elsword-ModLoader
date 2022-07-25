@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{56340503-8A7C-4B24-A364-4A622BFB3D74}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>oPatcher</RootNamespace>
+    <AssemblyName>oPatcher</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon %288%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TagLibSharp, Version=2.2.0.0, Culture=neutral, PublicKeyToken=db62eba44689b5b0, processorArchitecture=MSIL">
+      <HintPath>..\packages\TagLibSharp.2.2.0\lib\net45\TagLibSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppPaths.cs" />
+    <Compile Include="editEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editEntry.Designer.cs">
+      <DependentUpon>editEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMod.Designer.cs">
+      <DependentUpon>EditMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="filelistDBDataSet.cs">
+      <DependentUpon>filelistDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="filelistDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>filelistDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="filelistDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>filelistDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMods.Designer.cs">
+      <DependentUpon>ManageMods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryRead.cs" />
+    <Compile Include="Mod.cs" />
+    <Compile Include="modListFinal.cs">
+      <DependentUpon>modListFinal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modListFinal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modListFinal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modlstDBDataSet.cs">
+      <DependentUpon>modlstDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="modlstDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modlstDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Newmod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newmod.Designer.cs">
+      <DependentUpon>Newmod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="settings.Designer.cs">
+      <DependentUpon>settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsControl.cs" />
+    <EmbeddedResource Include="editEntry.resx">
+      <DependentUpon>editEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMod.resx">
+      <DependentUpon>EditMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMods.resx">
+      <DependentUpon>ManageMods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newmod.resx">
+      <DependentUpon>Newmod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="settings.resx">
+      <DependentUpon>settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="filelistDBDataSet.xsc">
+      <DependentUpon>filelistDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="filelistDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>filelistDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="filelistDBDataSet.xss">
+      <DependentUpon>filelistDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="filelistDBDataSet1.xsc">
+      <DependentUpon>filelistDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="filelistDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>filelistDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="filelistDBDataSet1.xss">
+      <DependentUpon>filelistDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="modListFinal.xsc">
+      <DependentUpon>modListFinal.xsd</DependentUpon>
+    </None>
+    <None Include="modListFinal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modListFinal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modListFinal.xss">
+      <DependentUpon>modListFinal.xsd</DependentUpon>
+    </None>
+    <None Include="modlstDBDataSet.xsc">
+      <DependentUpon>modlstDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="modlstDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>modlstDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="modlstDBDataSet.xss">
+      <DependentUpon>modlstDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\oPatcher.modlstDBDataSetTableAdapters.modsTableAdapter.datasource" />
+    <None Include="Properties\DataSources\oPatcher.modlstDBDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\oPatcher.modlstDBDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon %288%29.ico" />
+    <Content Include="filelistDB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\disable-mods-0_hilight.png" />
+    <None Include="Resources\btn_managemods1.png" />
+    <None Include="Resources\disable-mods-1.png" />
+    <None Include="Resources\disable-mods-0.png" />
+    <None Include="Resources\btn-stats-on-hilight.png" />
+    <None Include="Resources\btn-stats-on.png" />
+    <None Include="Resources\btn-stats-off-hilight.png" />
+    <None Include="Resources\btn-stats-off.png" />
+    <None Include="Resources\btn_play-off-hilight.png" />
+    <None Include="Resources\btn_play-off.png" />
+    <None Include="Resources\btn_play-hilight.png" />
+    <None Include="Resources\btn_play.png" />
+    <None Include="Resources\btn_managemods-off-hilight.png" />
+    <None Include="Resources\btn_managemods-off.png" />
+    <None Include="Resources\btn_managemods-hilight.png" />
+    <None Include="Resources\btn_managemods.png" />
+    <None Include="Resources\btn_apply-off-hilight.png" />
+    <None Include="Resources\btn_apply-off.png" />
+    <None Include="Resources\btn_apply-hilight.png" />
+    <None Include="Resources\btn_apply.png" />
+    <None Include="Resources\default_bg.png" />
+    <None Include="Resources\btn_play1.png" />
+    <None Include="Resources\home-bg1.png" />
+    <None Include="Resources\bg1.png" />
+    <None Include="Resources\bg0.png" />
+    <None Include="Resources\elsorigin48x48.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

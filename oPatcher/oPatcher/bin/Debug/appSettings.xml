@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-16"?>
+<SettingsControl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <activeMods>
+    <string>default</string>
+    <string>metal</string>
+  </activeMods>
+  <launcherPath>C:\Users\Daniel Lisboa\Desktop\elsbom\elsorigin.exe</launcherPath>
+  <minWhenStart>true</minWhenStart>
+  <startMinimized>false</startMinimized>
+  <startWithWindows>false</startWithWindows>
+</SettingsControl>
